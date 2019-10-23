@@ -1,0 +1,24 @@
+print("Car Game\n")
+started = False
+while True:
+    inp=input("> ")
+    if inp.lower()=="start":
+        if started:
+            print("Already Started... FU")
+        else:
+            started = True
+            print("Car Started................ Ready to go")
+    elif inp.lower()=="stop":
+        if started:
+            print("Car STOPPED !!!")
+            started = False
+        else:
+            print("Already Stopped... FU")
+    elif inp.lower()=="exit":
+        break
+    elif inp.lower()=="help":
+        print("start--> Car Start\n")
+        print("stop--> Car Stop\n")
+        print("exit--> Car Quit")
+    else:
+        print("Car Malfunctioned.....")
