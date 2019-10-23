@@ -10,7 +10,7 @@ while True:
             print("Car Started................ Ready to go")
     elif inp.lower()=="stop":
         if started:
-            print("Car STOPPED !!!")
+            print("Car Stopped!!!")
             started = False
         else:
             print("Already Stopped... FU")
