@@ -1,0 +1,86 @@
+
+<html>
+<title>
+EVALUATION
+</title>
+<head>
+<center><font face="comic sans ms" color="margenta" size="14">  FRAMING </font></center>
+</head>
+<body bgcolor="sky blue">
+<h2>
+<font face="BankGothic Md BT">
+ENTER THE FOLLOWING DATA CAREFULLY....
+</font>
+</h2>
+<form>
+FIRST NAME: <input type="text" name="fname" size="15" maxlenght="30" placeholder="e.g. mani">
+<br><br>
+LAST NAME: <input type="text" name="lname" size="15" maxlenght="30">
+<br><br>
+ENROLLMENT NUMBER: <input type="text" name="ename" size="15" maxlength="15">
+<br><br>
+PHONE NUMBER: <input type="text" name="pnumber" size="10" maxlength="10">
+<br><br><br>
+<input type="submit" value=" SUBMIT YOUR DATA ">
+<input type="reset" value="RESET">
+<hr>
+<h3><font face="BankGothic Md BT"> NOW CREATE YOUR PASSWORD </font></h3>
+PASSWORD: <input type="password" name="password" size="20" maxlength="40">
+<br>
+<br>
+<hr>
+<h1><font face="bankgothic md bt"> FURTHUR DETAILS </font></h1>
+<font size="5"><b>KNOWN LANGUAGES: </b></font><br>
+ENGLISH <input type="checkbox" name="language"><br>
+HINDI <input type="checkbox" name="language"><br>
+TAMIL <input type="checkbox" name="language"><br>
+TELUGU <input type="checkbox" name="language"><br>
+GERMAN <input type="checkbox" name="language"><br>
+SPANISH <input type="checkbox" name="language">
+<br><br><br>
+<font size="5"><b> NATIONALITY </b></font><br>
+INDIAN <input type="radio" name="nation"><br>
+AMERICAN <input type="radio" name="nation"><br>
+AUSTRALIAN <input type="radio" name="nation"><br>
+GERMAN <input type="radio" name="nation"><br>
+SPAIN <input type="radio" name="nation"><br>
+<br><br>
+<font size="5"><b> SEX </b></font><br>
+MALE <input type="radio" name="sex">
+FEMALE <input type="radio" name="sex">
+<br><br><br>
+<font size="5"><b>SELECT YOUR CITY:  </b></font>
+<select name="list" size="1">
+<br><br>
+<option selected>ALLAHABAD</option>
+<option>LUCKNOW</option>
+<option>KANPUR</option>
+<option>MEERUT</option>
+<option>NOIDA</option>
+<option>VARANSI</option>
+</select>
+<br><br><br><br><br><br>
+<h1> YOUR FEEDBACK </h1>
+<textarea name="comments" rows="10" cols="25" placeholder="AAO MAARAO">
+</textarea>
+</form>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
