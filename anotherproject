@@ -1,0 +1,328 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<string.h>
+int i;
+struct room
+{
+
+    int  r_charge;
+    char r_type[7];
+    char r_avail;
+    int  r_per ;
+
+}r_no[10];
+
+struct customer
+{
+   char  c_name[20];
+   int   n_days;
+   int   room_no;
+   float rent;
+}cu;
+
+void getavail()
+ {
+   for(i=0;i<10;i++)
+    {
+        if(i==0||i==1)
+        {
+            strcpy(r_no[i].r_type, " Special Deluxe ");
+            r_no[i].r_charge = 1500;
+            if(r_no[i].r_per==0)
+                r_no[i].r_avail=' Y ';
+            else
+                r_no[i].r_avail=' N ';
+
+        }
+        if(i==2||i==3)
+        {
+            strcpy(r_no[i].r_type, " Deluxe ");
+            r_no[i].r_charge = 1000;
+            if(r_no[i].r_per==0)
+                r_no[i].r_avail=' Y ';
+            else
+                r_no[i].r_avail=' N ';
+
+        }
+        if(i==4||i==5)
+        {
+            strcpy(r_no[i].r_type, " Economy ");
+            r_no[i].r_charge = 750;
+            if(r_no[i].r_per==0)
+                r_no[i].r_avail=' Y ';
+            else
+                r_no[i].r_avail=' N ';
+
+        }
+        if(i==6||i==7)
+        {
+            strcpy(r_no[i].r_type, " Conference ");
+            r_no[i].r_charge = 5000;
+            if(r_no[i].r_per==0)
+                r_no[i].r_avail=' Y ';
+            else
+                r_no[i].r_avail=' N ';
+
+        }
+
+    }
+
+ }
+void putavail()
+ {
+   system("cls");
+   printf("\n                          ROOM AVAILABILITY");
+   printf("\n                         -------------------");
+   printf("\n Room No. |    Type     |  Charge  |  Availability  |  No. of Persons |");
+   for(i=0;i<8;i++)
+     {
+         printf("\n%d       %s       %d      %c      %d",i+1,r_no[i].r_type,r_no[i].r_charge,r_no[i].r_avail,r_no[i].r_per);
+     }
+     getch();
+ }
+void start()
+ {
+   printf("\n\t\t\t\t=============================== JAYPEE INTERNATONALS =================================\n");
+   printf("\n\t\t\t******************* Near International Expocentre, NH-24 , Sector-62 , Noida 201301, INDIA *********************** ");
+   printf("\n\n\n\t\t\t\t                       ............W E L C O M E.............");
+   printf("\n\n\t\t\t\t\t\t\t....... FACILITIES AVAILABLE .......\n");
+   printf("\n\n\n\t\t\t\t\t\t\t    1. 4 Swimming Pool Available.\n");
+   printf("\n\t\t\t\t\t\t\t    2. Spa , Sauna with Jacuzzi.\n");
+   printf("\n\t\t\t\t\t\t\t    3. Sufficient Parking Space.\n");
+   printf("\n\t\t\t\t\t\t\t    4. Cab Arrangement.\n");
+   printf("\n\t\t\t\t\t\t\t    5. Tourist Guides.\n");
+   printf("\n\t\t\t\t\t\t\t    6. Free Wi-fi Services.\n");
+   printf("\n\t\t\t\t\t\t\t    7. 24 Hours Room Service.\n");
+   printf("\n\n\n\n\n\t\t\t\t\t\t\t Press any KEY to Continue .....");
+   getch();
+ }
+
+ void Rooms()
+ {
+    system("cls");
+    int n;
+    printf("\nChoose The Room Type:\n");
+    printf("\n\n 1.Special Deluxe \n\n 2.Deluxe \n\n 3.Economy \n\n 4.Conference Room\n\n");
+    scanf("%d",&n);
+    switch(n)
+    {
+    case 1:
+        {
+            system("cls");
+            printf("\n Advance Payment: >>>750\n\n");
+            printf("\n                      FEATURES OF THIS ROOM                       ");
+            printf("\n------------------------------------------------------------------");
+            printf("\n\n Room Type            >>> SPECIAL DELUXE ");
+            printf("\n\n Room charges         >>> Rs. 1500 per day");
+            printf("\n\n 1. Bed               >>>  3");
+            printf("\n\n 2.Capacity           >>>  6");
+            printf("\n\n 3.Balcony available     ");
+            printf("\n\n------------------------------------------------------------------");
+            printf("\n                     ADDITIONAL FEATURES                        ");
+            printf("\n\n------------------------------------------------------------------");
+            printf("\n\n 1.A/C  Available ");
+            printf("\n\n 2.Geyser Available");
+            printf("\n\n 3.TV Available      ");
+            printf("\n------------------------------------------------------------------");
+        }
+        break;
+
+    case 2:
+        {
+            system("cls");
+            printf("\n Advance Payment: >>> 500\n\n");
+            printf("\n                      FACILITIES                       ");
+            printf("\n-------------------------------------------------------------------");
+            printf("\n\n Room Type            >>> Deluxe                                      ");
+            printf("\n\n Room charges         >>> Rs.1000 per day");
+            printf("\n\n 1. Bed               >>>   2");
+            printf("\n\n 2.Capacity           >>>   4");
+            printf("\n\n-------------------------------------------------------------------");
+            printf("\n                    ADDITIONAL FEATURES                        ");
+            printf("\n\n-------------------------------------------------------------------");
+            printf("\n\n 1.A/C Available   ");
+            printf("\n\n 2.Geyser Available");
+            printf("\n\n 3.TV Available      ");
+            printf("\n-------------------------------------------------------------------");
+        }
+        break;
+    case 3:
+        {
+            system("cls");
+            printf("\n Advance Payment: >>> 400\n");
+            printf("\n                   FACILITIES                      \n ");
+            printf("\n-------------------------------------------------------------------");
+            printf("\n\n Room Type          >>> Economy                                    ");
+            printf("\n\n Room charges       >>> Rs.750 per day");
+            printf("\n\n 1. Bed             >>>   2");
+            printf("\n\n 2.Capacity         >>>   4");
+            printf("\n\n-------------------------------------------------------------------");
+            printf("\n                    ADDITIONAL FEATURES                        ");
+            printf("\n\n-------------------------------------------------------------------");
+            printf("\n\n 1.Geyser Available");
+            printf("\n\n 2.TV Available");
+            printf("\n-------------------------------------------------------------------");
+        }
+        break;
+    case 4:
+        {
+            system("cls");
+            printf("\n Advance Payment:>>>5000\n");
+            printf("\n                      FACILITIES                       ");
+            printf("\n-------------------------------------------------------------------");
+            printf("\n\n Room Type          >>> CONFERENCE ROOM                                      ");
+            printf("\n\n Room charges       >>>Rs.10000 per day");
+            printf("\n\n 1.Tables           >>> 2");
+            printf("\n\n 2.Rest Rooms       >>> 4");
+            printf("\n\n 3.Capacity         >>>      50");
+            printf("\n\n-------------------------------------------------------------------");
+            printf("\n                    ADDITIONAL FEATURES                        ");
+            printf("\n\n-------------------------------------------------------------------");
+            printf("\n\n 1.Projectors Available      ");
+            printf("\n\n 2.Catering Available");
+        }
+        break;
+    default:
+        {
+            printf("\n\nWrong Choice !! Choose Between 1-4");
+        }
+
+    }
+    getch();
+ }
+ int generate_rno()
+  {
+    FILE *fp;
+    int rno=0;
+    fp = fopen ("b.txt","r");
+    while(fread(&cu,sizeof(struct customer),1,fp))
+    {
+	rno=cu.room_no;
+    }
+    rno=rno+1;
+
+    printf("\t\t %d",rno);
+    return rno;
+
+  fclose(fp);
+  }
+
+void check_in()
+{
+   FILE *outf;
+   int n;
+   system("cls");
+   int ch;
+   struct customer c;
+   outf=fopen("b.txt","a");
+   if (outf == NULL)
+     {
+      printf("\n Error b.txt \n\n");
+      exit(1);
+     }
+
+    n=generate_rno(ch);
+
+    c.room_no=n;
+
+    printf("\n\n Your Allocated Room Number is:   %d \n" , c.room_no);
+
+    printf("\n Customer Name:  ");
+    scanf ("%s",c.c_name);
+    printf("\n Number of Days of Stay:  ");
+    scanf ("%d",&c.n_days);
+    printf("\n Stay Payment:  ");
+    scanf ("%f",&c.rent);
+
+    // write entire structure to Hotel file
+    fwrite (&c, sizeof(struct customer), 1, outf );
+
+
+        fclose(outf);
+
+     }
+
+void list()
+{
+    FILE *f;
+    f = fopen ("b.txt","r");
+    struct customer d;
+    system("cls");
+    while(fread(&d,sizeof(struct customer),1,f))
+    {
+        printf("\n Room No.      : %d \t",d.room_no);
+        printf("\n First Name    : %s \t",d.c_name);
+        printf("\n Days of Stay  : %d \t",d.n_days);
+        printf("\n Total Bill    : %f \t",d.rent);
+        printf("\n");
+
+    }
+    getch();
+    fclose(f);
+}
+void check_out()
+{
+    system("cls");
+    int n;
+    printf("Enter room no. to be de-allocated \n ");
+     scanf("%d",&n);
+
+     if(r_no[n-1].r_avail=='N')
+     {
+        r_no[n-1].r_avail='Y';
+        r_no[n-1].r_per= 0;
+        printf("Room de-allocated");
+     }
+     else
+        printf("\n \n Room already empty. ");
+        getch();
+}
+
+void main()
+ {
+   system("COLOR F2");
+   char ans;
+   int ch;
+   start();
+   system("cls");
+
+   do
+     {
+       system("cls");
+       printf("\n\n\n\t\t\t\t\t\t\t***********  Choose a category  *************   ");
+       printf("\n\n\t\t\t----------------------------------------------------------------------------------------------------------------\n\n");
+       printf("\n\n\t\t\t\t\t\t\t    1. Check availability    ");
+       printf("\n\n\t\t\t\t\t\t\t    2. See lists of room     ");
+       printf("\n\n\t\t\t\t\t\t\t    3. Room allocation       ");
+       printf("\n\n\t\t\t\t\t\t\t    4. Show customer details ");
+       printf("\n\n\t\t\t\t\t\t\t    5. Cancellation          ");
+       printf("\n\n\t\t\t\t\t\t\t    6. Room Deallocation     ");
+       printf("\n\n\t\t\t\t\t\t\t    7. Exit                  ");
+       scanf("%d",&ch);
+       switch(ch)
+        {
+                case 1:     getavail();
+                            putavail();
+                            break;
+
+                case 2:     Rooms();
+                            break;
+
+                case 3 :    check_in();
+                            break;
+
+                case 4 :    list();
+                            break;
+
+                case 6 :    check_out();
+                            break;
+
+                case 7:     exit(0);
+
+            }
+
+
+     }  while(ch!=8);
+
+ }
