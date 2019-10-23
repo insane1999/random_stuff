@@ -55,7 +55,7 @@ FEMALE <input type="radio" name="sex">
 <option selected>ALLAHABAD</option>
 <option>LUCKNOW</option>
 <option>KANPUR</option>
-<option>MEERUT</option>
+<option>GHAZIABAD</option>
 <option>NOIDA</option>
 <option>VARANSI</option>
 </select>
